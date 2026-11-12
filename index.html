@@ -1,77 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Character encoding and page setup -->
     <meta charset="UTF-8">
     <title>Pokémon Center – Prototype</title>
+
+    <!-- Ensures responsive behaviour on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- External CSS stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+<!-- Header section containing logo and navigation menu -->
 <header>
     <div class="container nav-bar">
+
+        <!-- Official Pokémon-inspired logo -->
         <div class="logo">
             <img src="images/pokemon logo.jpg" alt="Pokémon Logo" style="height:60px;">
         </div>
-        <div class="nav-toggle" id="navToggle">&#9776;</div>
+
+        <!-- Mobile navigation menu toggle -->
+        <div class="nav-toggle" id="navToggle">☰</div>
+
+        <!-- Main website navigation links -->
         <ul class="nav-links" id="navLinks">
             <li><a href="#hero">Home</a></li>
             <li><a href="#products">Shop</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+
     </div>
 </header>
 
+<!-- Hero section introduces the website and its purpose -->
 <section class="hero" id="hero">
     <div class="container hero-content">
+
         <div class="hero-text">
-            <h1>Bright, Clean Pokémon Shopping Experience</h1>
-            <p>White and yellow theme inspired by Pikachu and official merchandise.</p>
+            <h1>POKÉMON CENTER OFFICIAL STORE</h1>
+
+            <p>The store where to find all your Pokémon merchandise!</p>
+
+            <!-- Call-to-action button directing users to products -->
             <a href="#products" class="hero-btn">Shop Now</a>
         </div>
-    
+
     </div>
 </section>
 
+<!-- Product showcase section -->
 <section id="products" class="container">
+
     <h2 class="section-title">Featured Products</h2>
 
+    <!-- Product grid displaying available merchandise -->
     <div class="products-grid">
+
+        <!-- Product Card: Bulbasaur Plush -->
         <article class="product-card">
             <div class="product-image">
                 <img src="images/bulbasaur.jpg" alt="Bulbasaur Plush">
             </div>
+
             <div class="product-body">
-                <h3 class="product-title">Starter Plush Collection</h3>
-                <p>Soft plush set inspired by iconic starter creatures.</p>
+                <h3 class="product-title">Bulbasaur Plush</h3>
+                <p>Soft plush set inspired by iconic starter Pokémon.</p>
                 <p class="product-price">$39.99</p>
-                <button class="product-btn" onclick="addToCart('Starter Plush Collection')">Add to Cart</button>
+
+                <!-- JavaScript function simulates adding an item to cart -->
+                <button class="product-btn"
+                    onclick="addToCart('Bulbasaur Plush')">
+                    Add to Cart
+                </button>
             </div>
         </article>
 
+        <!-- Product Card: Trainer Hoodie -->
         <article class="product-card">
             <div class="product-image">
                 <img src="images/pokemon hoodie.jpg" alt="Pikachu Hoodie">
             </div>
+
             <div class="product-body">
                 <h3 class="product-title">Trainer Hoodie</h3>
                 <p>Comfortable hoodie themed around a trainer journey.</p>
                 <p class="product-price">$59.99</p>
-                <button class="product-btn" onclick="addToCart('Trainer Hoodie')">Add to Cart</button>
+
+                <button class="product-btn"
+                    onclick="addToCart('Trainer Hoodie')">
+                    Add to Cart
+                </button>
             </div>
         </article>
+
+        <!-- Product Card: Pikachu Plush -->
+        <article class="product-card">
+            <div class="product-image">
+                <img src="images/pikachu.jpg" alt="Pikachu Plush">
+            </div>
+
+            <div class="product-body">
+                <h3 class="product-title">Pikachu Plush</h3>
+                <p>Soft and cuddly Pikachu plush for every trainer.</p>
+                <p class="product-price">$34.99</p>
+
+                <button class="product-btn"
+                    onclick="addToCart('Pikachu Plush')">
+                    Add to Cart
+                </button>
+            </div>
+        </article>
+
+        <!-- Product Card: Charmander Plush -->
+        <article class="product-card">
+            <div class="product-image">
+                <img src="images/charmander.jpg" alt="Charmander Plush">
+            </div>
+
+            <div class="product-body">
+                <h3 class="product-title">Charmander Plush</h3>
+                <p>Bring home the fire-type favourite.</p>
+                <p class="product-price">$34.99</p>
+
+                <button class="product-btn"
+                    onclick="addToCart('Charmander Plush')">
+                    Add to Cart
+                </button>
+            </div>
+        </article>
+
+        <!-- Product Card: Squirtle Plush -->
+        <article class="product-card">
+            <div class="product-image">
+                <img src="images/squirtle.jpg" alt="Squirtle Plush">
+            </div>
+
+            <div class="product-body">
+                <h3 class="product-title">Squirtle Plush</h3>
+                <p>Adorable water-type companion.</p>
+                <p class="product-price">$34.99</p>
+
+                <button class="product-btn"
+                    onclick="addToCart('Squirtle Plush')">
+                    Add to Cart
+                </button>
+            </div>
+        </article>
+
     </div>
 </section>
 
+<!-- Contact section allowing users to send enquiries -->
 <section id="contact" class="contact-section">
+
     <div class="container contact-grid">
+
+        <!-- Contact information -->
         <div>
             <h3>Contact Us</h3>
             <p>Email: support@pokemoncenter-prototype.com</p>
         </div>
 
+        <!-- Contact form with required validation fields -->
         <form id="contactForm">
+
             <div class="form-group">
                 <label>Name *</label>
                 <input type="text" id="name" required>
@@ -87,16 +183,26 @@
                 <textarea id="message" required></textarea>
             </div>
 
-            <button class="contact-submit" type="submit">Submit</button>
+            <!-- Form submission button -->
+            <button class="contact-submit" type="submit">
+                Submit
+            </button>
+
+            <!-- Displays validation and success messages -->
             <div class="form-message" id="formMessage"></div>
+
         </form>
+
     </div>
 </section>
 
+<!-- Footer with copyright and educational disclaimer -->
 <footer>
     <p>© 2026 Pokémon Center Prototype – Educational Use Only</p>
 </footer>
 
+<!-- External JavaScript file for interactivity -->
 <script src="script.js"></script>
+
 </body>
 </html>
